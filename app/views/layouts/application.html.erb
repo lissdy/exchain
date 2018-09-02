@@ -72,7 +72,7 @@
             </span>
             </a>
             <ul class="treeview-menu">
-              <li class="active"><a href="ExChain.html"><i class="fa fa-circle-o"></i> Tickets</a></li>
+              <li class="active"><a href="<% dashboard_index_url%>"><i class="fa fa-circle-o"></i> Tickets</a></li>
               <li><a href="pages/credits/list.html"><i class="fa fa-circle-o"></i> Credits</a></li>
             </ul>
           </li>
@@ -81,7 +81,10 @@
       <!-- /.sidebar -->
     </aside>
 
-    <%= yield %>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <%= yield %>
+    </div>
 
     <!-- /.content-wrapper -->
     <footer class="main-footer">

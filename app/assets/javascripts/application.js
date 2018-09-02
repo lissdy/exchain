@@ -15,5 +15,7 @@
 //= require jquery2
 //= require jquery_ujs
 //= require admin-lte/bootstrap/js/bootstrap
-//= require admin-lte/dist/js/app.js
+//= require admin-lte/dist/js/app
+//= require datatables.net/js/jquery.dataTables.min
+//= require datatables.net-bs/js/dataTables.bootstrap.min
 //= require_tree .
