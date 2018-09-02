@@ -16,11 +16,15 @@
             <table id="tickets" class="table table-bordered table-striped">
               <thead>
               <tr>
-                <th>TicketID</th>
+                <th>TicketId</th>
                 <th>Status</th>
                 <th>Title</th>
                 <th>Type</th>
                 <th>Value</th>
+                <th>Owner</th>
+                <th>DeadLine</th>
+                <th>Comment</th>
+                <th>Policy</th>
               </tr>
               </thead>
             </table>
@@ -35,27 +39,22 @@
 
 <script type="text/javascript">
     $(function () {
-        var data = [
-            [
-                "Tiger Nixon",
-                "System Architect",
-                "Edinburgh",
-                "5555",
-                "2011/04/25",
-                "$3,120"
-            ],
-            [
-                "Garrett Winters",
-                "Director",
-                "Edinburgh",
-                "8422",
-                "2011/07/25",
-                "$5,300"
-            ]
-        ]
-
         $('#tickets').DataTable( {
-            data: data
-        } );
+            ajax: {
+                url: '/tickets.json',
+                dataSrc: ''
+            },
+        columns: [
+            { data: 'TicketId' },
+            { data: 'Status' },
+            { data: 'Title' },
+            { data: 'Type' },
+            { data: 'Value' },
+            { data: 'Owner' },
+            { data: 'DeadLine' },
+            { data: 'Comment' },
+            { data: 'Policy' }
+        ]
+    } );
     });
 </script>
