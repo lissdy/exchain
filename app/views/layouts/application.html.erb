@@ -8,7 +8,158 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="hold-transition skin-blue sidebar-mini">
+
+  <div class="wrapper">
+
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="exeChainAdmin.html" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>E</b>x</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>Ex</b>CHAIN</span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <!-- User Account: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="/img/lisa-160.png" class="user-image" alt="User Image">
+                <span class="hidden-xs">Lisa Li</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- User image -->
+                <li class="user-header">
+                  <img src="/img/lisa-160.png" class="img-circle" alt="User Image">
+
+                  <p>
+                    LOB - Developer
+                    <small>Member since Match. 2018</small>
+                  </p>
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree">
+          <li class="treeview active">
+            <a href="#">
+              <i class="fa fa-table"></i> <span>Assets</span>
+              <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu">
+              <li class="active"><a href="ExChain.html"><i class="fa fa-circle-o"></i> Tickets</a></li>
+              <li><a href="pages/credits/list.html"><i class="fa fa-circle-o"></i> Credits</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+          Assets
+          <small>Tickets</small>
+        </h1>
+      </section>
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="box">
+              <div class="box-header">
+                <h3 class="box-title">Tickets</h3>
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>TicketID</th>
+                    <th>Status</th>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Value</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td><a href="pages/tickets/detail.html">TK9842</a></td>
+                    <td><span class="label label-primary">Valid</span></td>
+                    <td>TBC</td>
+                    <td>TBC</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <td><a href="pages/tickets/detail-taken.html">TK1848</a></td>
+                    <td><span class="label label-warning">Taken</span></td>
+                    <td>TBC</td>
+                    <td>TBC</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td><a href="pages/tickets/detail.html">TK7429</a></td>
+                    <td><span class="label label-danger">Rejected</span></td>
+                    <td>TBC</td>
+                    <td>TBC</td>
+                    <td>40</td>
+                  </tr>
+                  <tr>
+                    <td><a href="pages/tickets/detail.html">TK7429</a></td>
+                    <td><span class="label label-success">Confirmed</span></td>
+                    <td>TBC</td>
+                    <td>TBC</td>
+                    <td>10</td>
+                  </tr>
+                </table>
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+          </div>
+          <!-- /.col -->
+        </div>
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 0.0.1
+      </div>
+      <strong>Copyright &copy; 2018 <a href="https://adminlte.io">SAP Labs</a>.</strong> All rights
+      reserved.
+    </footer>
+  </div>
     <%= yield %>
   </body>
 </html>
