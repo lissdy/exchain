@@ -1,0 +1,63 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Assets
+    <small>Tickets</small>
+  </h1>
+  <ol class="breadcrumb" style="top: 5px">
+    <li class="active"><button type="button" class="btn btn-primary">Create Ticket</button></li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <!-- /.box-header -->
+        <div class="box-body">
+          <table id="tickets" class="table table-bordered table-striped">
+            <thead>
+            <tr>
+              <th>TicketId</th>
+              <th>Status</th>
+              <th>Title</th>
+              <th>Type</th>
+              <th>Value</th>
+              <th>Owner</th>
+              <th>DeadLine</th>
+              <th>Comment</th>
+              <th>Policy</th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <!-- /.col -->
+  </div>
+</section>
+
+<script type="text/javascript">
+    $(function () {
+        $('#tickets').DataTable( {
+            ajax: {
+                url: '/tickets.json',
+                dataSrc: ''
+            },
+            columns: [
+                { data: 'TicketId' },
+                { data: 'Status' },
+                { data: 'Title' },
+                { data: 'Type' },
+                { data: 'Value' },
+                { data: 'Owner' },
+                { data: 'DeadLine' },
+                { data: 'Comment' },
+                { data: 'Policy' }
+            ]
+        } );
+    });
+</script>
