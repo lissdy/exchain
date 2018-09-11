@@ -18,4 +18,5 @@
 //= require admin-lte/dist/js/app
 //= require datatables.net/js/jquery.dataTables.min
 //= require datatables.net-bs/js/dataTables.bootstrap.min
+//= require admin-lte/plugins/datepicker/bootstrap-datepicker
 //= require_tree .

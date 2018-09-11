@@ -16,5 +16,6 @@
  *= require admin-lte/dist/css/skins/skin-blue
  *= require font-awesome/css/font-awesome.min
  *= require datatables.net-bs/css/dataTables.bootstrap.min
+ *= require admin-lte/plugins/datepicker/datepicker3
  *= require_self
  */
