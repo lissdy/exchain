@@ -1,0 +1,66 @@
+<div class="box box-warning">
+  <div class="box-header with-border">
+    <h3 class="box-title">Create Ticket</h3>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
+    <%= form_with(model: ticket, local: true) do |form| %>
+        <!-- text input -->
+        <div class="form-group">
+          <label>Title</label>
+          <%= text_field_tag(:title,nil,class:'form-control',placeholder:'Ticket Title')%>
+        </div>
+
+        <!-- select -->
+        <div class="form-group">
+          <label>Type</label>
+          <%= select_tag(:type,options_for_select([['Event support',1],['Workshop speaker',2]]),class:'form-control')%>
+        </div>
+
+        <div class="form-group">
+          <label>Value</label>
+          <%= text_field_tag(:value,nil,class:'form-control',placeholder:'How many credits?')%>
+        </div>
+
+        <!-- Date -->
+        <div class="form-group">
+          <label>DeadLine:</label>
+
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <%= text_field_tag(:deadline,nil,class:'form-control pull-right',id:'datepicker')%>
+          </div>
+          <!-- /.input group -->
+        </div>
+
+        <!-- textarea -->
+        <div class="form-group">
+          <label>Comment</label>
+          <%= text_area_tag(:comment,nil,class:'form-control',rows:3,placeholder:'Enter ...')%>
+        </div>
+
+        <div class="form-group has-warning">
+          <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i> Policy</label>
+          <%= text_field_tag(:policy,nil,class:'form-control',placeholder:'How many people could take?',id:'inputWarning')%>
+        </div>
+
+      <div class="actions">
+        <%= form.submit(nil, class:'btn btn-primary') %>
+      </div>
+    <% end %>
+  </div>
+  <!-- /.box-body -->
+</div>
+
+<script>
+    $(function () {
+        //Date picker
+        $('#datepicker').datepicker({
+            autoclose: true
+        })
+
+    });
+
+</script>
