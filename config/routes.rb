@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :credits
   resources :tickets
   get 'dashboard/index'
   get 'dashboard/admin_index'

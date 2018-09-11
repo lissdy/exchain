@@ -1,0 +1,46 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Assets
+    <small>Credits</small>
+  </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <!-- /.box-header -->
+        <div class="box-body">
+          <table id="tickets" class="table table-bordered table-striped">
+            <thead>
+            <tr>
+              <th>TicketId</th>
+              <th>Value</th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <!-- /.col -->
+  </div>
+</section>
+
+<script type="text/javascript">
+    $(function () {
+        $('#tickets').DataTable( {
+            ajax: {
+                url: '/credits.json',
+                dataSrc: ''
+            },
+            columns: [
+                { data: 'TicketId' },
+                { data: 'Value' },
+            ]
+        } );
+    });
+</script>
