@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body class="hold-transition skin-blue sidebar-mini fixed">
 
   <div class="wrapper">
 
@@ -32,17 +32,17 @@
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="/img/lisa-160.png" class="user-image" alt="User Image">
-                <span class="hidden-xs">Lisa Li</span>
+                <img src="/img/bill-160.png" class="user-image" alt="User Image">
+                <span class="hidden-xs">Bill Xu</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header">
-                  <img src="/img/lisa-160.png" class="img-circle" alt="User Image">
+                  <img src="/img/bill-160.png" class="img-circle" alt="User Image">
 
                   <p>
-                    LOB - Developer
-                    <small>Member since Match. 2018</small>
+                    SAP Digital School - president
+                    <small>Member since Match. 2009</small>
                   </p>
                 </li>
                 <!-- Menu Footer-->
@@ -55,6 +55,34 @@
             </li>
           </ul>
         </div>
+        <!--<div class="navbar-custom-menu">-->
+          <!--<ul class="nav navbar-nav">-->
+            <!--&lt;!&ndash; User Account: style can be found in dropdown.less &ndash;&gt;-->
+            <!--<li class="dropdown user user-menu">-->
+              <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                <!--<img src="/img/lisa-160.png" class="user-image" alt="User Image">-->
+                <!--<span class="hidden-xs">Lisa Li</span>-->
+              <!--</a>-->
+              <!--<ul class="dropdown-menu">-->
+                <!--&lt;!&ndash; User image &ndash;&gt;-->
+                <!--<li class="user-header">-->
+                  <!--<img src="/img/lisa-160.png" class="img-circle" alt="User Image">-->
+
+                  <!--<p>-->
+                    <!--LOB - Developer-->
+                    <!--<small>Member since Match. 2018</small>-->
+                  <!--</p>-->
+                <!--</li>-->
+                <!--&lt;!&ndash; Menu Footer&ndash;&gt;-->
+                <!--<li class="user-footer">-->
+                  <!--<div class="pull-right">-->
+                    <!--<a href="#" class="btn btn-default btn-flat">Sign out</a>-->
+                  <!--</div>-->
+                <!--</li>-->
+              <!--</ul>-->
+            <!--</li>-->
+          <!--</ul>-->
+        <!--</div>-->
       </nav>
     </header>
     <!-- Left side column. contains the logo and sidebar -->
@@ -74,6 +102,7 @@
             <ul class="treeview-menu">
               <li class="active"><a href="<%= dashboard_admin_index_path%>"><i class="fa fa-circle-o"></i> Tickets</a></li>
               <li><a href="<%= credits_path%>"><i class="fa fa-circle-o"></i> Credits</a></li>
+              <li><a href="<%= users_path%>"><i class="fa fa-circle-o"></i> Users</a></li>
             </ul>
           </li>
         </ul>

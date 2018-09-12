@@ -1,0 +1,20 @@
+[
+  {
+    "UserId":"XX",
+    "Name":"Lisa",
+    "LOB":"SF",
+    "IsAdmin": "false"
+  },
+  {
+    "UserId":"XX",
+    "Name":"Bill Xu",
+    "LOB":"MD",
+    "IsAdmin": "true"
+  },
+  {
+    "UserId":"XX",
+    "Name":"Austin",
+    "LOB":"HANA",
+    "IsAdmin": "false"
+  }
+]

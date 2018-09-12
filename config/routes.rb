@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :credits
   resources :tickets
   get 'dashboard/index'

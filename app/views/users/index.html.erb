@@ -6,7 +6,7 @@
 <section class="content-header">
   <h1>
     Assets
-    <small>Credits</small>
+    <small>Users</small>
   </h1>
 </section>
 
@@ -17,11 +17,13 @@
       <div class="box">
         <!-- /.box-header -->
         <div class="box-body">
-          <table id="tickets" class="table table-bordered table-striped">
+          <table id="users" class="table table-bordered table-striped">
             <thead>
             <tr>
-              <th>TicketId</th>
-              <th>Value</th>
+              <th>UserId</th>
+              <th>Name</th>
+              <th>LOB</th>
+              <th>IsAdmin</th>
             </tr>
             </thead>
           </table>
@@ -36,14 +38,16 @@
 
 <script type="text/javascript">
     $(function () {
-        $('#tickets').DataTable( {
+        $('#users').DataTable( {
             ajax: {
-                url: '/credits.json',
+                url: '/users.json',
                 dataSrc: ''
             },
             columns: [
-                { data: 'TicketId' },
-                { data: 'Value' },
+                { data: 'UserId' },
+                { data: 'Name' },
+                { data: 'LOB' },
+                { data: 'IsAdmin' },
             ]
         } );
     });
