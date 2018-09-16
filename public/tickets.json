@@ -1,7 +1,7 @@
 [
   {
-    "TicketId":"XX",
-    "Status":"Open",
+    "TicketId":"<a href='/tickets/3186'>3186</a>",
+    "Status":"<span class='label label-primary'>Valid</span>",
     "Title":"AI Open day host on Sep 17th 2018",
     "Type":"Event support",
     "Value":3,
@@ -11,8 +11,8 @@
     "Policy":"1 person"
   },
   {
-    "TicketId":"XX",
-    "Status":"Close",
+    "TicketId":"<a href='/tickets/3187'>3187</a>",
+    "Status":"<span class='label label-danger'>Close</span>",
     "Title":"open day on June 27th 2018",
     "Type":"Event support",
     "Value":3,
@@ -22,8 +22,8 @@
     "Policy":"1 person"
   },
   {
-    "TicketId":"XX",
-    "Status":"Processing",
+    "TicketId":"<a href='/tickets/3188'>3188</a>",
+    "Status":"<span class='label label-warning'>Processing</span>",
     "Title":"Sustainable workshop on Sep 4th 218",
     "Type":"Workshop speaker",
     "Value":4,

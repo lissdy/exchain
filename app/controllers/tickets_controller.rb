@@ -6,4 +6,8 @@ class TicketsController < ApplicationController
   def create
     redirect_to dashboard_admin_index_path
   end
+
+  def show
+
+  end
 end

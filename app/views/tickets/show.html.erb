@@ -1,4 +1,91 @@
-<p id="notice"><%= notice %></p>
+<% content_for :tree_menu do %>
+  <li class="active"><a href="<%= dashboard_admin_index_path%>"><i class="fa fa-circle-o"></i> Tickets</a></li>
+  <li><a href="<%= credits_path%>"><i class="fa fa-circle-o"></i> Credits</a></li>
+  <li><a href="<%= users_path%>"><i class="fa fa-circle-o"></i> Users</a></li>
+<% end %>
 
-<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
-<%= link_to 'Back', tickets_path %>
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Ticket
+      <small>#3186</small>
+    </h1>
+  </section>
+
+  <!-- Main content -->
+  <section class="invoice">
+    <!-- title row -->
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="page-header">
+          <i class="fa fa-globe"></i>LOB: MD
+          <small class="pull-right">Created Date: 8/10/2018</small>
+        </h2>
+      </div>
+      <!-- /.col -->
+    </div>
+
+
+    <div class="row">
+      <!-- accepted payments column -->
+      <div class="col-xs-12">
+
+        <p class="lead">Basic Information</p>
+
+        <div class="table-responsive">
+          <table class="table">
+            <tr>
+              <th style="width:50%">Title:</th>
+              <td>TBC</td>
+            </tr>
+            <tr>
+              <th>Type</th>
+              <td>TBC</td>
+            </tr>
+            <tr>
+              <th>Value</th>
+              <td>30</td>
+            </tr>
+            <tr>
+              <th>Deadline</th>
+              <td>2019/01/01</td>
+            </tr>
+            <tr>
+              <th>Policy</th>
+              <td>3</td>
+            </tr>
+          </table>
+        </div>
+
+        <p class="lead">Additional Information</p>
+
+        <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
+          Gartner Recognizes SAP SuccessFactors as a Leader in 2018 Magic Quadrant!
+          For the 3rd year in a row, SAP SuccessFactors has been named a leader in the 2018 Gartner Magic Quadrant (MQ) for Cloud Human Capital Management Suites for Midmarket and Large Enterprises.
+        </p>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+    <!-- this row will not appear when printing -->
+    <div class="row no-print">
+      <div class="col-xs-12">
+        <!-- <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+        <button type="button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment
+        </button> -->
+        <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
+          <i class="fa fa-hand-paper-o"></i> Take
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- /.content -->
+  <div class="clearfix"></div>
+
+<script>
+    $(function () {
+        $(".content-wrapper").css('min-height', $(window).height() - $('.main-footer').outerHeight());
+    });
+
+</script>
