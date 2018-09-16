@@ -2,12 +2,21 @@
     $(".content-wrapper").css('min-height', $(window).height() - $('.main-footer').outerHeight());
 </script>
 
+<% content_for :tree_menu do %>
+  <li><a href="<%= dashboard_admin_index_path%>"><i class="fa fa-circle-o"></i> Tickets</a></li>
+  <li><a href="<%= credits_path%>"><i class="fa fa-circle-o"></i> Credits</a></li>
+  <li class="active"><a href="<%= users_path%>"><i class="fa fa-circle-o"></i> Users</a></li>
+<% end %>
+
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
     Assets
     <small>Users</small>
   </h1>
+  <ol class="breadcrumb" style="top: 5px">
+    <li class="active"><a href="<%= new_user_path%>" type="button" class="btn btn-primary" style="color: white">Create User</a></li>
+  </ol>
 </section>
 
 <!-- Main content -->

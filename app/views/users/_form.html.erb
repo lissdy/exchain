@@ -1,17 +1,39 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= form.submit %>
+<div class="box-warning">
+  <div class="box-header with-border">
+    <h3 class="box-title">Create User</h3>
   </div>
-<% end %>
+  <!-- /.box-header -->
+  <div class="box-body">
+    <%= form_with(model: user, local: true) do |form| %>
+      <!-- text input -->
+      <div class="form-group">
+        <label>Name</label>
+        <%= text_field_tag(:title,nil,class:'form-control',placeholder:'Ticket Title')%>
+      </div>
+
+      <!-- select -->
+      <div class="form-group">
+        <label>LOB</label>
+        <%= select_tag(:type,options_for_select([['SMB development & support',1],['HCM',2],['IBSO Shanghai',3]]),class:'form-control')%>
+      </div>
+
+      <div class="checkbox">
+        <label>
+          <%= check_box_tag :IsAdmin%> IsAdmin
+        </label>
+      </div>
+
+      <div class="actions">
+        <%= form.submit(nil, class:'btn btn-primary') %>
+      </div>
+    <% end %>
+  </div>
+  <!-- /.box-body -->
+</div>
+
+<script>
+
+    $(function () {
+        $(".content-wrapper").css('min-height', $(window).height() - $('.main-footer').outerHeight());
+    });
+</script>

@@ -2,6 +2,12 @@
     $(".content-wrapper").css('min-height', $(window).height() - $('.main-footer').outerHeight());
 </script>
 
+<% content_for :tree_menu do %>
+  <li class="active"><a href="<%= dashboard_admin_index_path%>"><i class="fa fa-circle-o"></i> Tickets</a></li>
+  <li><a href="<%= credits_path%>"><i class="fa fa-circle-o"></i> Credits</a></li>
+  <li><a href="<%= users_path%>"><i class="fa fa-circle-o"></i> Users</a></li>
+<% end %>
+
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
